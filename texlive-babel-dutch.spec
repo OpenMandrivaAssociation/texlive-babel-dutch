@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-babel-dutch
-Version:	20131013
-Release:	9
+Version:	3.8i
+Release:	1
 Summary:	TeXLive babel-dutch package
 Group:		Publishing
 URL:		http://tug.org/texlive
