@@ -1,19 +1,13 @@
-# revision 30263
-# category Package
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
 Name:		texlive-babel-dutch
-Version:	3.8i
-Release:	2
+Version:	60362
+Release:	1
 Summary:	TeXLive babel-dutch package
 Group:		Publishing
 URL:		http://tug.org/texlive
 License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-dutch.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-dutch.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-dutch.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-dutch.r60362.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-dutch.doc.r60362.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-dutch.source.r60362.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,24 +17,24 @@ Requires(post):	texlive-kpathsea
 TeXLive babel-dutch package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/generic/babel-dutch/dutch.ldf
-%doc %{_texmfdistdir}/doc/generic/babel-dutch/dutch.pdf
+%{_texmfdistdir}/tex/generic/babel-dutch
+%doc %{_texmfdistdir}/doc/generic/babel-dutch
 #- source
-%doc %{_texmfdistdir}/source/generic/babel-dutch/dutch.dtx
-%doc %{_texmfdistdir}/source/generic/babel-dutch/dutch.ins
+%doc %{_texmfdistdir}/source/generic/babel-dutch
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
