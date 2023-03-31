@@ -1,6 +1,6 @@
 Name:		texlive-babel-dutch
 Version:	60362
-Release:	1
+Release:	2
 Summary:	TeXLive babel-dutch package
 Group:		Publishing
 URL:		http://tug.org/texlive
